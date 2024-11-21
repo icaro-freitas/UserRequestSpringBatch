@@ -17,6 +17,7 @@ public class JobConfig {
 	
 	@Bean
 	public Job job(JobRepository jobRepository, Step fetchUserDataAndStoreDBStep) {
+		
 		logger.info("Start job execution ...");
 		
 		return new JobBuilder("job", jobRepository)
